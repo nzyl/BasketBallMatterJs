@@ -8,17 +8,21 @@ var balls = [];
 var attempts = 5;
 var isGameOver=true;
 var bottom;
+var backgroundMusic;
 var hoop,hoopImg;
 var backBoard;
 var r;
 
 function preload() {
   backgroundImg = loadImage("./assets/background.png");
+  backgroundMusic = loadSound("./assets/background.mp3")
   hoopImg = loadImage("./assets/hoop.png");
   hoop = loadImage("assets/hoop.png");
 }
 
 function setup() {
+  backgroundMusic.play();
+  
   canvas = createCanvas(1200,600);
   engine = Engine.create();
   world = engine.world;
